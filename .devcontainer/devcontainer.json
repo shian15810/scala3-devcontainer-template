@@ -35,7 +35,13 @@
 		// Configure properties specific to VS Code.
 		"vscode": {
 			// Set *default* container specific settings.json values on container create.
-			"settings": {},
+			"settings": {
+				"files.watcherExclude": {
+					"**/.bloop": true,
+					"**/.metals": true,
+					"**/.ammonite": true
+				}
+			},
 
 			"extensions": [
 				"ms-azuretools.vscode-docker",
