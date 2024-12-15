@@ -48,7 +48,6 @@
         "esbenp.prettier-vscode",
         "github.copilot-chat",
         "github.copilot",
-        "ms-azuretools.vscode-docker",
         "scala-lang.scala",
         "scalameta.metals"
       ]
