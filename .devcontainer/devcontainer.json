@@ -1,55 +1,56 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/java
 {
-	"name": "Scala",
+  "name": "Scala",
 
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/java:1-21-bullseye",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "image": "mcr.microsoft.com/devcontainers/java:1-21-bullseye",
 
-	"features": {
-		"ghcr.io/devcontainers/features/java:1": {
-			"version": "none",
-			"installMaven": "false",
-			"installGradle": "false"
-		}
-	},
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "none",
+      "installMaven": "false",
+      "installGradle": "false"
+    }
+  },
 
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
 
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "java -version",
-	"postCreateCommand": "curl -fL https://github.com/coursier/coursier/releases/latest/download/cs-x86_64-pc-linux.gz | gzip -d > cs && chmod +x cs && ./cs setup --yes && rm -f cs",
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "java -version",
+  "postCreateCommand": "curl -fL https://github.com/coursier/coursier/releases/latest/download/cs-x86_64-pc-linux.gz | gzip -d > cs && chmod +x cs && ./cs setup --yes && rm -f cs",
 
-	// Configure tool-specific properties.
-	// "customizations": {},
+  // Configure tool-specific properties.
+  // "customizations": {},
 
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root",
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root",
 
-	"remoteEnv": {
-		"PATH": "${containerEnv:PATH}:/home/vscode/.local/share/coursier/bin"
-	},
+  "remoteEnv": {
+    "PATH": "${containerEnv:PATH}:/home/vscode/.local/share/coursier/bin"
+  },
 
-	"customizations": {
-		// Configure properties specific to VS Code.
-		"vscode": {
-			// Set *default* container specific settings.json values on container create.
-			"settings": {
-				"files.watcherExclude": {
-					"**/.bloop": true,
-					"**/.metals": true,
-					"**/.ammonite": true
-				}
-			},
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Set *default* container specific settings.json values on container create.
+      "settings": {
+        "files.watcherExclude": {
+          "**/.bloop": true,
+          "**/.metals": true,
+          "**/.ammonite": true
+        }
+      },
 
-			"extensions": [
-				"github.copilot-chat",
-				"github.copilot",
-				"ms-azuretools.vscode-docker",
-				"scala-lang.scala",
-				"scalameta.metals"
-			]
-		}
-	}
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "github.copilot-chat",
+        "github.copilot",
+        "ms-azuretools.vscode-docker",
+        "scala-lang.scala",
+        "scalameta.metals"
+      ]
+    }
+  }
 }

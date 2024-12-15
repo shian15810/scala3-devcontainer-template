@@ -1,5 +1,8 @@
 {
-    "files.watcherExclude": {
-        "**/target": true
-    }
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.watcherExclude": {
+    "**/target": true
+  }
 }
