@@ -44,6 +44,7 @@
       },
 
       "extensions": [
+        "editorconfig.editorconfig",
         "esbenp.prettier-vscode",
         "github.copilot-chat",
         "github.copilot",
