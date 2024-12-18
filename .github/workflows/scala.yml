@@ -19,6 +19,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write # this permission is needed to submit the dependency graph
+
     env:
       JAVA_OPTS: -Xms2048M -Xmx2048M -Xss6M -XX:ReservedCodeCacheSize=256M -Dfile.encoding=UTF-8
     steps:
@@ -36,5 +39,3 @@ jobs:
       # Optional: This step uploads information to the GitHub dependency graph and unblocking Dependabot alerts for the repository
     - name: Upload dependency graph
       uses: scalacenter/sbt-dependency-submission@v2
-      permissions:
-        contents: write # this permission is needed to submit the dependency graph
