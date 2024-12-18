@@ -1,3 +1,5 @@
+import com.github.shian15810.scala3.devcontainer.template.hello
+
 // For more information on writing tests, see
 // https://scalameta.org/munit/docs/getting-started.html
 class MySuite extends munit.FunSuite {
