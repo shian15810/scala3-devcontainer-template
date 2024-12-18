@@ -49,6 +49,7 @@
         "github.copilot-chat",
         "github.copilot",
         "github.vscode-github-actions",
+        "ms-vsliveshare.vsliveshare",
         "scala-lang.scala",
         "scalameta.metals"
       ]
