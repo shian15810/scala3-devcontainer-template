@@ -1,7 +1,7 @@
 on:
+  workflow_dispatch:
   schedule:
     - cron: '0 0 * * *'
-  workflow_dispatch:
 
 name: Scala Steward
 
@@ -10,11 +10,12 @@ permissions:
   pull-requests: write
 
 jobs:
-  scala-steward:
+  # scala-steward:
+  update:
     runs-on: ubuntu-latest
-    name: Scala Steward
+    # name: Scala Steward
     steps:
       - name: Install sbt
         uses: sbt/setup-sbt@v1
-      - name: Scala Steward
+      - name: Launch Scala Steward
         uses: scala-steward-org/scala-steward-action@v2
