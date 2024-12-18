@@ -48,6 +48,7 @@
         "esbenp.prettier-vscode",
         "github.copilot-chat",
         "github.copilot",
+        "github.vscode-github-actions",
         "scala-lang.scala",
         "scalameta.metals"
       ]
