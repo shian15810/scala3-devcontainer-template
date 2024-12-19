@@ -19,7 +19,7 @@
 
   // Use 'postCreateCommand' to run commands after the container is created.
   // "postCreateCommand": "java -version",
-  "postCreateCommand": "curl -fL https://github.com/coursier/coursier/releases/latest/download/cs-x86_64-pc-linux.gz | gzip -d > cs && chmod +x cs && ./cs setup --yes && rm -f cs",
+  "postCreateCommand": "curl -fL https://github.com/coursier/coursier/releases/latest/download/cs-x86_64-pc-linux.gz | gzip -d > cs && chmod +x cs && ./cs setup --yes && rm -f cs && echo 'Run `eval \"$(cs java --jvm <version> --env)\"` in a new terminal to switch to JVM <version>.' && echo 'Run `eval \"$(cs java --disable)\"` to revert all changes made to env vars by any previous command.' && echo",
 
   // Configure tool-specific properties.
   // "customizations": {},
